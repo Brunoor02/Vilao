@@ -20,37 +20,35 @@ export default function Viloes() {
         <main>
             <section>
 
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>VILÃO</th>
+                            <th>MALDADES</th>
+                            <th>SUPER PODER</th>
+                        </tr>
+                    </thead>
+                </table>
                 {vilaoo.map(item =>
 
-
                     <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>VILÃO</th>
-                                <th>MALDADES</th>
-                                <th>SUPER PODER</th>
-                            </tr>
-                        </thead>
                         <tbody>
-                            {vilaoo.map(item =>
-                                <tr>
-                                    <td>{item.id}</td>
-                                    <td>{item.nome}</td>
-                                    <td>{item.maldade}</td>
-                                    <td>{item.poder}</td>
-                                </tr>
-
-                            )}
+                            <tr>
+                                <td>{item.id}</td>
+                                <td>{item.nome}</td>
+                                <td>{item.maldade}</td>
+                                <td>{item.poder}</td>
+                            </tr>
 
 
 
                         </tbody>
                     </table>
-
-
-
                 )}
+
+
+
 
                 <Link to={'/'}> Voltar </Link>
 
