@@ -6,7 +6,7 @@ export default function Cadastro() {
 
     const [nome, setNome] = useState('');
     const [maldade, setMaldade] = useState('');
-    const [poder, setPoder] = useState('');
+    const [poder, setPoder] = useState(false);
 
     async function click() {
 
@@ -15,7 +15,7 @@ export default function Cadastro() {
     
             alert('Vilao inserido com sucesso')
         } catch (err) {
-            alert(err.message)
+            alert(err.response.data.erro)
         }
 
 
@@ -33,11 +33,11 @@ export default function Cadastro() {
                     <input type="text" placeholder='Nome do vilão' value={nome} onChange={e => setNome(e.target.value)} />
                 </div>
                 <div>
-                    <input type="text" placeholder='Maldade do vilão' value={maldade} onChange={e => setMaldade(e.target.value)} />
+                    <input type="text" placeholder='Nivel de maldade do vilão' value={maldade} onChange={e => setMaldade(e.target.value)} />
                 </div>
                 <div>
-                    <input type="text" placeholder='O vilão tem poder?' value={poder} onChange={e => setPoder(e.target.value)} />
-                </div> *
+                    <input type="checkbox" placeholder='O vilão tem poder?' value={poder} onChange={e => setPoder(e.target.checked)} />
+                </div> 
 
                 <Link to='/'>Voltar</Link>
                 <br/>

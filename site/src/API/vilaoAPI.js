@@ -13,3 +13,10 @@ export async function colocarVilao(nome, maldade, poder){
 
 
 }
+
+export async function todosOsViloes(nome, maldade, poder){
+    const resposta = await api.get ('/vilao');
+    return resposta.data;
+
+
+}
