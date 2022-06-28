@@ -19,7 +19,6 @@ export default function Viloes() {
     return (
         <main>
             <section>
-
                 <table>
                     <thead>
                         <tr>
@@ -31,7 +30,6 @@ export default function Viloes() {
                     </thead>
                 </table>
                 {vilaoo.map(item =>
-
                     <table>
                         <tbody>
                             <tr>
@@ -40,21 +38,11 @@ export default function Viloes() {
                                 <td>{item.maldade}</td>
                                 <td>{item.poder}</td>
                             </tr>
-
-
-
                         </tbody>
                     </table>
                 )}
-
-
-
-
                 <Link to={'/'}> Voltar </Link>
-
-
             </section>
         </main>
     );
-
 }

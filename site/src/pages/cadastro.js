@@ -20,8 +20,6 @@ export default function Cadastro() {
 
 
     }
-
-
     return (
         <div className="App">
             <header className="App-header">
